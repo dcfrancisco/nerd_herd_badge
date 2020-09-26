@@ -9,7 +9,7 @@ class NerdHerd extends StatefulWidget {
 
 class _NerdHerdState extends State<NerdHerd> {
   final logo = Image.asset(
-    "assets/logo.png",
+    "assets/images/logo.png",
   );
 
   @override
@@ -30,7 +30,7 @@ class _NerdHerdState extends State<NerdHerd> {
                   top: 5.0,
                   bottom: 30.0,
                 ),
-                child: PhotoImage('assets/profile.jpg'),
+                child: PhotoImage('assets/images/profile.jpg'),
               ),
               Padding(
                 padding: EdgeInsets.only(top: 10.0, bottom: 20.0),
