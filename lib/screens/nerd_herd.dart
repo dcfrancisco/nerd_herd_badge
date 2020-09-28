@@ -12,17 +12,30 @@ class _NerdHerdState extends State<NerdHerd> {
     "assets/images/logo.png",
   );
 
+  void displayBottomSheet(BuildContext context) {
+    showModalBottomSheet(
+        context: context,
+        builder: (ctx) {
+          return Container(
+            height: MediaQuery.of(context).size.height * 0.4,
+            child: Center(
+              child: Text("will change name + photo here..."),
+            ),
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.white,
-        body: SafeArea(
+        body: Center(
           child: Column(
             children: <Widget>[
               Padding(
-                padding: EdgeInsets.only(top: 20, bottom: 25),
+                padding: EdgeInsets.only(top: 50, bottom: 25),
                 child: logo,
               ),
               Padding(
@@ -30,16 +43,27 @@ class _NerdHerdState extends State<NerdHerd> {
                   top: 5.0,
                   bottom: 30.0,
                 ),
-                child: PhotoImage('assets/images/profile.jpg'),
+                child: InkWell(
+                  onTap: () {
+                    displayBottomSheet(context);
+                    print("test");
+                  },
+                  child: PhotoImage('assets/images/profile.jpg'),
+                ),
               ),
               Padding(
                 padding: EdgeInsets.only(top: 10.0, bottom: 20.0),
-                child: Text(
-                  'CHUCK BARTOWSKI',
-                  style: TextStyle(
-                    fontSize: 35.0,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
+                child: GestureDetector(
+                  onTap: () {
+                    displayBottomSheet(context);
+                  },
+                  child: Text(
+                    'CHUCK BARTOWSKI',
+                    style: TextStyle(
+                      fontSize: 35.0,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
