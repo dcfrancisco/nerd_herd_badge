@@ -27,57 +27,54 @@ class _NerdHerdState extends State<NerdHerd> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.white,
-        body: Center(
-          child: Column(
-            children: <Widget>[
-              Padding(
-                padding: EdgeInsets.only(top: 50, bottom: 25),
-                child: logo,
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.only(top: 50, bottom: 25),
+              child: logo,
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                top: 5.0,
+                bottom: 30.0,
               ),
-              Padding(
-                padding: EdgeInsets.only(
-                  top: 5.0,
-                  bottom: 30.0,
-                ),
-                child: InkWell(
-                  onTap: () {
-                    displayBottomSheet(context);
-                    print("test");
-                  },
-                  child: PhotoImage('assets/images/profile.jpg'),
-                ),
+              child: InkWell(
+                onTap: () {
+                  displayBottomSheet(context);
+                  print("test");
+                },
+                child: PhotoImage('assets/images/profile.jpg'),
               ),
-              Padding(
-                padding: EdgeInsets.only(top: 10.0, bottom: 20.0),
-                child: GestureDetector(
-                  onTap: () {
-                    displayBottomSheet(context);
-                  },
-                  child: Text(
-                    'CHUCK BARTOWSKI',
-                    style: TextStyle(
-                      fontSize: 35.0,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                    ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 10.0, bottom: 20.0),
+              child: GestureDetector(
+                onTap: () {
+                  displayBottomSheet(context);
+                },
+                child: Text(
+                  'CHUCK BARTOWSKI',
+                  style: TextStyle(
+                    fontSize: 35.0,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.only(left: 20.0, right: 20.0),
-                child: BarcodeWidget(
-                  barcode: Barcode.code39(), // Barcode type and settings
-                  data: 'CHUCK',
-                  drawText: false,
-                  height: 100,
-                ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 20.0, right: 20.0),
+              child: BarcodeWidget(
+                barcode: Barcode.code39(), // Barcode type and settings
+                data: 'CHUCK',
+                drawText: false,
+                height: 100,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
