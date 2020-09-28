@@ -25,8 +25,13 @@ class _NerdHerdState extends State<NerdHerd> {
                 topRight: Radius.circular(20.0),
               ),
             ),
-            child: new Center(
-              child: Text("will change name + photo here..."),
+            child: new GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: new Center(
+                child: Text("will change name + photo here..."),
+              ),
             ),
           );
         });
