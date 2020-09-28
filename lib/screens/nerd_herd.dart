@@ -17,8 +17,15 @@ class _NerdHerdState extends State<NerdHerd> {
         context: context,
         builder: (ctx) {
           return Container(
-            height: MediaQuery.of(context).size.height * 0.4,
-            child: Center(
+            height: MediaQuery.of(context).size.height * 0.8,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20.0),
+                topRight: Radius.circular(20.0),
+              ),
+            ),
+            child: new Center(
               child: Text("will change name + photo here..."),
             ),
           );
