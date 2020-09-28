@@ -17,7 +17,7 @@ class _NerdHerdState extends State<NerdHerd> {
         context: context,
         builder: (ctx) {
           return Container(
-            height: MediaQuery.of(context).size.height * 0.8,
+            height: MediaQuery.of(context).size.height * 0.9,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
