@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:barcode_widget/barcode_widget.dart';
 import 'package:nerd_herd_badge/widgets/id_photo.dart';
+import 'package:nerd_herd_badge/screens/update_profile.dart';
 
 class NerdHerd extends StatefulWidget {
   @override
@@ -15,26 +16,7 @@ class _NerdHerdState extends State<NerdHerd> {
   void displayBottomSheet(BuildContext context) {
     showModalBottomSheet(
         context: context,
-        builder: (ctx) {
-          return Container(
-            height: MediaQuery.of(context).size.height * 0.9,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(20.0),
-                topRight: Radius.circular(20.0),
-              ),
-            ),
-            child: new GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: new Center(
-                child: Text("will change name + photo here..."),
-              ),
-            ),
-          );
-        });
+        builder: (BuildContext buildContext) => UpdateProfile());
   }
 
   @override
