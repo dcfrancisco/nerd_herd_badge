@@ -40,7 +40,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
           getImage;
           Navigator.pop(context);
         },
-        child: Row(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             _image == null ? Text('No image selected.') : Image.file(_image),
