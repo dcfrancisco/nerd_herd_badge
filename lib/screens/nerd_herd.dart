@@ -60,7 +60,10 @@ class _NerdHerdState extends State<NerdHerd> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 20.0, right: 20.0),
+              padding: EdgeInsets.only(
+                left: 20.0,
+                right: 20.0,
+              ),
               child: BarcodeWidget(
                 barcode: Barcode.code39(), // Barcode type and settings
                 data: 'CHUCK',
