@@ -5,7 +5,8 @@ A new Flutter project.
 ## Getting Started
 
 This project is a starting point for a Flutter application.
-![Nerd Head circle logo](/assets/sample.jpg "Nerd Herd logo")
+![Nerd Head circle logo](/assets/sample_1.jpg "Nerd Herd logo")
+
 A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
